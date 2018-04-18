@@ -5,7 +5,7 @@ a { color: inherit; text-decoration: none; }
 ol { list-style: none; }
 .clearfix::after { content: ''; display: block; clear: both; }
 .topNavBar { padding: 20px 0 20px 0; position: fixed; top: 0; left: 0; width: 100%; transition: all 0.5s; color: #b7b7b7; } 
-.topNavBar.sticky {background: white; padding: 10px, 0; z-index: 1; box-shadow: 0 0 10px rgba(0,0,0,0.25);}
+.topNavBar.sticky {background: white; padding: 10px 0; z-index: 1; box-shadow: 0 0 10px rgba(0,0,0,0.25); color: #3d4451;}
 .topNavBar-inner { padding: 0 16px; } 
 .topNavBar nav { padding-top: 5px; } 
 .topNavBar nav > ul { list-style: none; padding: 0; margin: 0; } 
