@@ -2,8 +2,8 @@
 <html>
   <head>
 		<title>雍威的个人简历</title>
-		<link rel="stylesheet" href="./main.css">
-
+		<link rel="stylesheet" href="main.css">
+		<!-- <link rel="stylesheet" href="./load.css"> -->
     <script src="//at.alicdn.com/t/font_595145_o9k2hsqnse5ewmi.js"></script>
 	<style type="text/css">
 			.loading { width: 200px; height: 200px; border: 1px solid red; position: relative; }
@@ -26,7 +26,7 @@
 		<div class="site-welcome active" id="siteWelcome">
 			<div class="loading"></div>
 		</div>
-  	<div class="topNavBar">
+  	<div id="topNavBar" class="topNavBar">
   		<div class="topNavBar-inner clearfix">
 	      <a class="logo" href="#" alt="logo" style="float: left;">
 	        <span class="rs">RS</span><span class="card">card</span>
@@ -176,7 +176,18 @@
 			}
 		</script>
     <script>
-			siteWelcome.classList.remove('active')
+			setTimeout(function() {
+				siteWelcome.classList.remove('active')
+				console.log(1)
+			}, 1000)
+			window.onscroll = function (event) {
+				console.log(2)
+				if (window.scrollY > 0) {
+					topNavBar.classList.add("sticky")
+				} else {
+					topNavBar.classList.remove("sticky")
+				}
+			}
 		</script>
   </body>
 </html>
