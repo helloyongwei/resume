@@ -64,7 +64,7 @@
     </div>
 
     <main>
-      <div id="siteAbout"	class="userCard">
+      <div data-x id="siteAbout"	class="userCard">
         <div class="pictureAndText clearfix">
           <div class="picture">
             <img src="./img/avatar.jpg" width="299" height="347" alt="头像">
@@ -116,7 +116,7 @@
       </p>
     </main>
 
-    <section id="siteSkills" class="skills">
+    <section data-x id="siteSkills" class="skills">
       <h2>技能</h2>
       <ol class="clearfix">
         <li>
@@ -158,7 +158,7 @@
       </ol>
     </section>
 
-    <section id="siteWorks" class="portfolio">
+    <section data-x id="siteWorks" class="portfolio">
       <h2>作品集</h2>
       <nav>
         <ol class="clearfix">
@@ -176,7 +176,8 @@
         <div class="small" style="top: 0; left: 644px;"><img src="./img/2.jpg" alt="作品2"></div>
         <div class="small" style="top: 300px; left: 644px;"><img src="./img/3.jpg" alt="作品3"></div>
       </div>
-    </section>
+		</section>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
 		<script>
 			portfolio1.onclick = function() {
 				portfolioBar.className = "bar state-1";
@@ -188,7 +189,7 @@
 				portfolioBar.className = "bar state-3";
 			}
 		</script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+		
     <script>
 			setTimeout(function() {
 				siteWelcome.classList.remove('active')
@@ -199,6 +200,23 @@
 				} else {
 					topNavBar.classList.remove("sticky")
 				}
+
+				let specialTags = document.querySelectorAll('[data-x]')
+				let minIndex = 0
+				for (let i = 1; i < specialTags.length; i++) {
+					if (Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)) {
+						minIndex = i
+					}
+				}
+				let id = specialTags[minIndex].id
+				let a = document.querySelector('a[href="#' + id + '"]')
+				let li = a.parentNode
+				let brothersAndme = li.parentNode.children
+				for (let i = 0; i < brothersAndme.length; i++) {
+					brothersAndme[i].classList.remove('highlight')
+				}
+				li.classList.add('highlight')
+
 			}
 			let liTags = document.querySelectorAll('nav.menu > ul > li')
 			for (let i = 0; i < liTags.length; i++) {
