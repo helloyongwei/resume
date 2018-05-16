@@ -43,7 +43,8 @@ body > main .downloadResume-wrapper { text-align: center; }
 body > main .downloadResume { font-size: 14px; line-height: 16px; padding: 21px 55px; border: 1px solid #CDCFD1; background: #EFEFEF; display: inline-block; border-radius: 2px; color: #3d4451; font-weight: bold; margin: 32px 0; transition: box-shadow 0.2s; }
 body > main .downloadResume:hover { box-shadow: 0 4px 13px 0 rgba(0,0,0,0.2); } 
 .seflIntroduction { max-width: 940px; margin: 0 auto; text-align: center; }
-section.skills, section.portfolio { max-width: 940px; margin: 0 auto; margin-top: 60px; }
+section.skills, 
+section.portfolio { max-width: 940px; margin: 0 auto; margin-top: 60px; }
 section.skills > h2, section.portfolio > h2 { text-align: center; color: #3d4451; font-size: 34px; line-height: 1.2; font-weight: 600; }
 section.skills h3 { font-size: 14px; line-height: 1.1; font-weight: 40px; } 
 section.skills > ol { background: white; box-shadow: 0 1px 5px 0 rgba(0,0,0,0.5); padding: 42px 50px 10px; margin-top: 30px; }
@@ -56,16 +57,7 @@ section.skills .progressBar > .item3 { width: 90%; }
 section.skills .progressBar > .item4 { width: 65%; }
 section.skills .progressBar > .item5 { width: 30%; }
 section.skills .progressBar > .item6 { width: 85%; }
-section.portfolio { text-align: center; margin-bottom: 100px; }
-section.portfolio > nav { text-align: center; margin-top: 32px; }
-section.portfolio > nav > ol { margin: 0 auto; display: inline-block; vertical-align: top; }
-section.portfolio > nav > ol > li { float: left; margin-left: 40px; cursor: pointer; }
-section.portfolio > nav > ol > li:nth-child(1) { margin-left: 0; } 
-section.portfolio > nav { display: inline-block; vertical-align: top; margin-bottom: 30px; }
-section.portfolio > nav .bar { height: 5px; background: white; margin-top: 5px; border-radius: 2px; } 
-section.portfolio > nav .bar.state-1 .bar-inner{ margin-left: 0; width: 30px; } 
-section.portfolio > nav .bar.state-2 .bar-inner{ margin-left: 70px; width: 30px; }
-section.portfolio > nav .bar.state-3 .bar-inner{ margin-left: 140px; width: 96px; }
-section.portfolio > nav .bar-inner { height: 100%; background: #E6686A; width: 10%; border-radius: 2px; transition: all 0.3s; }
-section.portfolio .works { position: relative; } 
-section.portfolio .works .big, section.portfolio .works .small { position: absolute; } 
+section.portfolio { text-align: center; margin-bottom: 100px; max-width: 720px;}
+section.portfolio h2{margin-bottom: 32px;} 
+section.portfolio .swiper-container {width: 668px; height: 501px;}
+

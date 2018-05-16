@@ -3,8 +3,9 @@
   <head>
 		<title>雍威的个人简历</title>
 		<link rel="stylesheet" href="main.css">
-		<!-- <link rel="stylesheet" href="./load.css"> -->
-    <script src="//at.alicdn.com/t/font_595145_o9k2hsqnse5ewmi.js"></script>
+		<link rel="stylesheet" href="/node_modules/swiper/dist/css/swiper.min.css">
+		<script src="//at.alicdn.com/t/font_595145_o9k2hsqnse5ewmi.js"></script>
+		<script src="node_modules/swiper/dist/js/swiper.min.js"></script>
 	<style type="text/css">
 			.loading { width: 200px; height: 200px; position: relative; }
 			.loading::before, loading::after { content: ''; position: absolute; width:0; height: 0; background: black; border-radius: 50%; top: 0; left: 0; bottom: 0; right: 0; margin: auto; animation: s 1s linear infinite; }
@@ -160,34 +161,37 @@
 
     <section data-x id="siteWorks" class="portfolio">
       <h2>作品集</h2>
-      <nav>
-        <ol class="clearfix">
-          <li id="portfolio1">所有</li>
-          <li id="portfolio2">框架</li>
-          <li id="portfolio3">原生JS&amp;CSS</li>
-        </ol>
-        <div id="portfolioBar" class="bar state-1">
-        	<div class="bar-inner"></div>
-        </div>
-      </nav>
-
-      <div class="works" style="height: 597px;">
-        <div class="big" style="top: 0; left: 0;"><img src="./img/1.jpg" alt="作品1"></div>
-        <div class="small" style="top: 0; left: 644px;"><img src="./img/2.jpg" alt="作品2"></div>
-        <div class="small" style="top: 300px; left: 644px;"><img src="./img/3.jpg" alt="作品3"></div>
-      </div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+						<!-- Slides -->
+						<img src="img/1.jpeg" class="swiper-slide">
+						<img src="img/2.jpeg" class="swiper-slide">
+						<img src="img/3.jpg" class="swiper-slide">
+				</div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+			
 		</section>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
 		<script>
-			portfolio1.onclick = function() {
-				portfolioBar.className = "bar state-1";
-			}
-			portfolio2.onclick = function() {
-				portfolioBar.className = "bar state-2";
-			}
-			portfolio3.onclick = function() {
-				portfolioBar.className = "bar state-3";
-			}
+			var mySwiper = new Swiper ('.swiper-container', {
+				// Optional parameters
+				loop: true,
+
+				// If we need pagination
+				pagination: {
+					el: '.swiper-pagination',
+				},
+
+				// Navigation arrows
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+
+			})
 		</script>
 		
     <script>
