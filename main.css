@@ -45,7 +45,9 @@ body > main .downloadResume:hover { box-shadow: 0 4px 13px 0 rgba(0,0,0,0.2); }
 .seflIntroduction { max-width: 940px; margin: 0 auto; text-align: center; }
 section.skills, 
 section.portfolio { max-width: 940px; margin: 0 auto; margin-top: 60px; }
-section.skills > h2, section.portfolio > h2 { text-align: center; color: #3d4451; font-size: 34px; line-height: 1.2; font-weight: 600; }
+section.message h2,
+section.skills > h2, 
+section.portfolio > h2 { text-align: center; color: #3d4451; font-size: 34px; line-height: 1.2; font-weight: 600; }
 section.skills h3 { font-size: 14px; line-height: 1.1; font-weight: 40px; } 
 section.skills > ol { background: white; box-shadow: 0 1px 5px 0 rgba(0,0,0,0.5); padding: 42px 50px 10px; margin-top: 30px; }
 section.skills > ol > li { float: left; width: 48%; box-sizing: border-box; }
@@ -61,3 +63,13 @@ section.portfolio { text-align: center; margin-bottom: 100px; max-width: 720px;}
 section.portfolio h2{margin-bottom: 32px;} 
 section.portfolio .swiper-container {width: 668px; height: 501px;}
 
+section.message > ol {
+    max-width: 800px;
+    margin: 0 600px;
+    border-top: 1px solid #DDD;
+}
+
+section.message > ol > li {
+    padding: 16px;
+    border-bottom: 1px solid #DDD;
+}

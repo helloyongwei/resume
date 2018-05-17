@@ -5,7 +5,7 @@
 		<link rel="stylesheet" href="main.css">
 		<link rel="stylesheet" href="/node_modules/swiper/dist/css/swiper.min.css">
 		<script src="//at.alicdn.com/t/font_595145_o9k2hsqnse5ewmi.js"></script>
-		<script src="node_modules/swiper/dist/js/swiper.min.js"></script>
+		
 	<style type="text/css">
 			.loading { width: 200px; height: 200px; position: relative; }
 			.loading::before, loading::after { content: ''; position: absolute; width:0; height: 0; background: black; border-radius: 50%; top: 0; left: 0; bottom: 0; right: 0; margin: auto; animation: s 1s linear infinite; }
@@ -176,12 +176,29 @@
 		</div>
 			
 		</section>
+
+		<section class="message">
+			<h2>留言</h2>
+			<ol id="messageList">
+				</ol>
+			<form id="postMessageForm" action="" method="post" style="width: 700px; margin: 50px auto;">
+				<label for="name">姓名:</label>
+				<input type="text" name="name" id="name">
+				<label for="content">内容:</label>
+				<input type="text" name="content" id="content">
+				<input type="submit" value="提交">
+			</form>
+			
+		</section>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+		<script src="node_modules/swiper/dist/js/swiper.min.js"></script>
+		<script src="//cdn1.lncld.net/static/js/3.6.8/av-min.js"></script>
+		<!-- 模块化 -->
 		<script src="./js/init-swiper.js"></script>
 		<script src="./js/auto-slide-up.js"></script>
 		<script src="./js/sticky-topbar.js"></script>
 		<script src="./js/smoothly-navigation.js"></script>
-		
+		<script src="./js/message.js"></script>
     <script>
 			setTimeout(function() {
 				siteWelcome.classList.remove('active')
