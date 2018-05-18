@@ -1,17 +1,4 @@
 !function() {
-		let liTags = document.querySelectorAll('nav.menu > ul > li')
-		for (let i = 0; i < liTags.length; i++) {
-			liTags[i].onmouseenter = function(event) {
-				let li = event.currentTarget
-				li.classList.add('active')
-			}
-			
-			liTags[i].onmouseleave = function(event) {
-				let li = event.currentTarget
-				li.classList.remove('active')
-			}
-		}
-
 		var view = document.querySelector('nav.menu')
 		var controller = {
 			view: null,
