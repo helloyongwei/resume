@@ -31,6 +31,7 @@
         view: null,
         messageList: null,
         model: null,
+        form: null,
         init: function(view, model) {
             this.view = view
             this.model = model
@@ -58,8 +59,10 @@
             })
         },
         bindEvents: function() {
-            this.form.addEventListener('submit', function(e) {
+            // console.log(this.form)
+            this.form.addEventListener('submit', (e)=> {
                 e.preventDefault()
+                // console.log(this)
                 this.saveMessage()
             })
         },
