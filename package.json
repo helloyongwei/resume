@@ -1,0 +1,23 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "1. 这是模仿网易云音乐的项目,   2. src/index.html 是网易云首页.   3. src/admin.html是网易云的后台页面.  4. 本地上传歌曲到七牛, 同时存储数据信息于leanCloud.   5. 本项目需要使用node, npm以及http-server",
+  "main": "index.js",
+  "dependencies": {
+    "swiper": "^4.2.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helloyongwei/resume.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/helloyongwei/resume/issues"
+  },
+  "homepage": "https://github.com/helloyongwei/resume#readme"
+}
